@@ -8,13 +8,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-google-tagmanager",
-      options: {
-        id: "GTM-PQNJRK",
-        includeInDevelopment: true,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/article`,
@@ -65,12 +58,6 @@ module.exports = {
         implementation: require('sass'),
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,

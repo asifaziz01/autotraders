@@ -1164,7 +1164,7 @@ export default () => {
                                   centeredSlides={true}
                                   effect="flip"
                                   flipEffect={{
-                                    slideShadows:false
+                                    slideShadows: false,
                                   }}
                                   updateOnWindowResize={true}
                                   loop={true}
