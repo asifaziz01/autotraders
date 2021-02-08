@@ -111,7 +111,7 @@ exports.onCreatePage = ({ page, actions }) => {
       deletePage(page)
       createPage({
         ...page,
-        path: `/index.html`,
+        path: `/index`,
       })
     }
     resolve()
