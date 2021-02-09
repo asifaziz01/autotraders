@@ -784,7 +784,7 @@ export default () => {
         }
       }
     `),
-    isBrowser = typeof window !== undefined,
+    isBrowser = typeof window !== 'undefined',
     [mode, setMode] = useState('desktop'),
     [sliderSize, setSetSliderSize] = useState(null),
     [activeSlide, setActiveSlide] = useState(null),
