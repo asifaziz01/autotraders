@@ -1626,7 +1626,7 @@ export default () => {
                     </button>
                     <Link
                       to="/index"
-                      className={`btn btn-primary ${mobile_back_button}`}
+                      className={`btn btn-default ${mobile_back_button}`}
                     >
                       <Left />
                     </Link>
