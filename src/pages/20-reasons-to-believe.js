@@ -27,6 +27,7 @@ export default () => {
       breadcrumb_back_button,
       breadcrumb_content,
       breadcrumb_button,
+      mobile_back_button,
       reason_slider_section,
       reason_slider_content_area,
       reason_slider_content_top,
@@ -1615,13 +1616,21 @@ export default () => {
             >
               <div className={reason_slider_content_area}>
                 <div className={reason_slider_content_top}>
-                  <button
-                    type="button"
-                    onClick={() => (window.location.href = `//toyota.ca`)}
-                    className={`btn btn-primary ${breadcrumb_button}`}
-                  >
-                    BUILD &amp; PRICE
-                  </button>
+                  <div className="d-flex justify-content-between">
+                    <button
+                      type="button"
+                      onClick={() => (window.location.href = `//toyota.ca`)}
+                      className={`btn btn-primary ${breadcrumb_button}`}
+                    >
+                      BUILD &amp; PRICE
+                    </button>
+                    <Link
+                      to="/index"
+                      className={`btn btn-primary ${mobile_back_button}`}
+                    >
+                      <Left />
+                    </Link>
+                  </div>
                   <h1 className={main_heading}>
                     <strong>20</strong>
                     <span> Reasons </span>
