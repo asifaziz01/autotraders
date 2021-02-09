@@ -1,16 +1,10 @@
 import React from "react"
-import {navigate} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import NotFound from "../css/notfound.module.css"
 
 const NotFoundPage = () => {
-  const isBrowser = typeof window !== 'undefined'
-  if(isBrowser && window.location.pathname === '/'){
-    navigate('/index')
-  }
-
   return (
     <Layout>
       <SEO title="404: Not found" />
