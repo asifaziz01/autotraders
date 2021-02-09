@@ -1017,16 +1017,6 @@ export default () => {
   })
   useEffect(() => {
     if (isBrowser) {
-      if (
-        window.dataLayer[window.dataLayer.length - 1].pageType !==
-        '/brand-experience/toyota-sienna/2021/reasons/en'
-      ) {
-        window.dataLayer.push({
-          event: 'gtm_bx_virtual_page',
-          pageType: '/brand-experience/toyota-sienna/2021/reasons/en',
-          sponsoredContentCampaign: 'toyota sienna - 2021',
-        })
-      }
       resetMode()
       setTimeout(() => {
         setSliderWidth()
@@ -1164,7 +1154,7 @@ export default () => {
                                   centeredSlides={true}
                                   effect="flip"
                                   flipEffect={{
-                                    slideShadows:false
+                                    slideShadows: false,
                                   }}
                                   updateOnWindowResize={true}
                                   loop={true}
