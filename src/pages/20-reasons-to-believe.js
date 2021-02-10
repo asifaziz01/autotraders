@@ -1617,7 +1617,7 @@ export default () => {
                       BUILD &amp; PRICE
                     </button>
                     <Link
-                      to="/index"
+                      to="/"
                       className={`btn btn-default ${mobile_back_button}`}
                     >
                       <Left />
