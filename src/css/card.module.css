@@ -241,6 +241,7 @@
     opacity: 1;
   }
 
+  .mobile_back_button,
   .reason_modal_dismiss {
     align-items: center;
     background: #ffffff;
@@ -258,10 +259,12 @@
     z-index: 3;
   }
 
+  .mobile_back_button:focus,
   .reason_modal_dismiss:focus {
     outline: none;
   }
 
+  .mobile_back_button svg path,
   .reason_modal_dismiss svg path {
     stroke: #3e3e3e;
   }

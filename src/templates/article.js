@@ -101,7 +101,7 @@ const ArticleTemplate = ({ data }) => {
         }/en`
       ) {
         window.dataLayer.push({
-          event: 'gtm_page_load',
+          event: 'gtm_bx_virtual_page',
           pageType: `/brand-experience/toyota-sienna/2021/article-${
             window.location.pathname.includes('family') ? 'family' : 'sienna'
           }/en`,

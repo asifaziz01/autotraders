@@ -27,6 +27,7 @@ export default () => {
       breadcrumb_back_button,
       breadcrumb_content,
       breadcrumb_button,
+      mobile_back_button,
       reason_slider_section,
       reason_slider_content_area,
       reason_slider_content_top,
@@ -783,7 +784,7 @@ export default () => {
         }
       }
     `),
-    isBrowser = typeof window !== undefined,
+    isBrowser = typeof window !== 'undefined',
     [mode, setMode] = useState('desktop'),
     [sliderSize, setSetSliderSize] = useState(null),
     [activeSlide, setActiveSlide] = useState(null),
@@ -793,62 +794,54 @@ export default () => {
     [tabletModal, setTabletModal] = useState(false),
     [reasonIndex, setReasonIndex] = useState(0),
     [currentReason, setCurrentReason] = useState(null),
-    openMobileTabletModal = (_, index) => {
+    openMobileTabletModal = (_, index, reasonId) => {
       setTimeout(() => {
         setReasonIndex(index)
         setCurrentReason(Reasons[index])
         setTabletModal(true)
         window.dataLayer.push({
           event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - click',
-          eventLabel: `card ${('0' + index + 1).slice(-2)}`,
+          eventAction: 'toyota sienna 2021 - card - flip',
+          eventLabel: `card ${('0' + reasonId).slice(-2)}`,
         })
       }, 301)
     },
     closeTabletModal = () => {
       setTabletModal(false)
     },
-    previousReason = () => {
+    previousReason = (currentReasonId) => {
+      const reasonNumber = (currentReasonId === 1)? Reasons.length: (currentReasonId - 1);
       $(`.${reason_slide_loader}`).show()
       if (reasonIndex === 0) {
         setReasonIndex(Reasons.length - 1)
         setCurrentReason(Reasons[Reasons.length - 1])
-        window.dataLayer.push({
-          event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - nav - prev',
-          eventLabel: `card ${('0' + Reasons.length).slice(-2)}`,
-        })
       } else {
         setReasonIndex(reasonIndex - 1)
         setCurrentReason(Reasons[reasonIndex - 1])
-        window.dataLayer.push({
-          event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - nav - prev',
-          eventLabel: `card ${('0' + reasonIndex).slice(-2)}`,
-        })
       }
+      window.dataLayer.push({
+        event: 'gtm_bx',
+        eventAction: 'toyota sienna 2021 - card - nav - prev',
+        eventLabel: `card ${('0' + reasonNumber).slice(-2)}`,
+      })
     },
-    nextReason = () => {
+    nextReason = (currentReasonId) => {
+      const reasonNumber = (currentReasonId === Reasons.length)? 1: (currentReasonId + 1);
       $(`.${reason_slide_loader}`).show()
       if (reasonIndex === Reasons.length - 1) {
         setReasonIndex(0)
         setCurrentReason(Reasons[0])
-        window.dataLayer.push({
-          event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - nav - next',
-          eventLabel: `card 0${1}`,
-        })
       } else {
         setReasonIndex(reasonIndex + 1)
         setCurrentReason(Reasons[reasonIndex + 1])
-        window.dataLayer.push({
-          event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - nav - next',
-          eventLabel: `card ${('0' + reasonIndex + 2).slice(-2)}`,
-        })
       }
+      window.dataLayer.push({
+        event: 'gtm_bx',
+        eventAction: 'toyota sienna 2021 - card - nav - next',
+        eventLabel: `card ${('0' + reasonNumber).slice(-2)}`,
+      })
     },
-    jumpToReason = (e, reasonId) => {
+    jumpToReason = reasonId => {
       $('html, body').animate(
         {
           scrollTop: 0,
@@ -867,8 +860,8 @@ export default () => {
         }
         window.dataLayer.push({
           event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - nav - next',
-          eventLabel: `card 0${reasonId}`,
+          eventAction: 'toyota sienna 2021 - card - click',
+          eventLabel: `card ${('0' + reasonId).slice(-2)}`,
         })
       }, 201)
     },
@@ -1017,16 +1010,6 @@ export default () => {
   })
   useEffect(() => {
     if (isBrowser) {
-      if (
-        window.dataLayer[window.dataLayer.length - 1].pageType !==
-        '/brand-experience/toyota-sienna/2021/reasons/en'
-      ) {
-        window.dataLayer.push({
-          event: 'gtm_bx_virtual_page',
-          pageType: '/brand-experience/toyota-sienna/2021/reasons/en',
-          sponsoredContentCampaign: 'toyota sienna - 2021',
-        })
-      }
       resetMode()
       setTimeout(() => {
         setSliderWidth()
@@ -1132,7 +1115,7 @@ export default () => {
                       >
                         <div className={`col ${reason_navigation}`}>
                           <button
-                            onClick={previousReason}
+                            onClick={()=>previousReason(currentReason.id)}
                             className={`${reason_roundButton} ${prev}`}
                           >
                             <Left />
@@ -1164,7 +1147,7 @@ export default () => {
                                   centeredSlides={true}
                                   effect="flip"
                                   flipEffect={{
-                                    slideShadows:false
+                                    slideShadows: false,
                                   }}
                                   updateOnWindowResize={true}
                                   loop={true}
@@ -1192,7 +1175,7 @@ export default () => {
                                   <SwiperSlide>
                                     <div
                                       className={`${reason_slide_holder} master`}
-                                      onClick={e => {
+                                      onClick={() => {
                                         window.dataLayer.push({
                                           event: 'gtm_bx',
                                           eventAction:
@@ -1203,7 +1186,7 @@ export default () => {
                                         })
                                         slider.slideNext()
                                       }}
-                                      onKeyPress={e => {
+                                      onKeyPress={() => {
                                         window.dataLayer.push({
                                           event: 'gtm_bx',
                                           eventAction:
@@ -1252,7 +1235,7 @@ export default () => {
                                   <SwiperSlide>
                                     <div
                                       className={`${reason_slide_holder}`}
-                                      onClick={e => {
+                                      onClick={() => {
                                         window.dataLayer.push({
                                           event: 'gtm_bx',
                                           eventAction:
@@ -1263,7 +1246,7 @@ export default () => {
                                         })
                                         slider.slideNext()
                                       }}
-                                      onKeyPress={e => {
+                                      onKeyPress={() => {
                                         window.dataLayer.push({
                                           event: 'gtm_bx',
                                           eventAction:
@@ -1367,7 +1350,7 @@ export default () => {
                         </div>
                         <div className={`col text-right ${reason_navigation}`}>
                           <button
-                            onClick={nextReason}
+                            onClick={()=>nextReason(currentReason.id)}
                             className={`${reason_roundButton} ${next}`}
                           >
                             <Right />
@@ -1442,12 +1425,12 @@ export default () => {
                                   className={reason_card_holder}
                                   onClick={e => {
                                     if (activeSlide === index) {
-                                      openMobileTabletModal(e, index)
+                                      openMobileTabletModal(e, index, id)
                                     }
                                   }}
                                   onKeyPress={e => {
                                     if (activeSlide === index) {
-                                      openMobileTabletModal(e, index)
+                                      openMobileTabletModal(e, index, id)
                                     }
                                   }}
                                   role="button"
@@ -1478,7 +1461,7 @@ export default () => {
                                               reason_card_button_element
                                             }
                                             onClick={e => {
-                                              openMobileTabletModal(e, index)
+                                              openMobileTabletModal(e, index, id)
                                             }}
                                           >
                                             <Open
@@ -1625,13 +1608,21 @@ export default () => {
             >
               <div className={reason_slider_content_area}>
                 <div className={reason_slider_content_top}>
-                  <button
-                    type="button"
-                    onClick={() => (window.location.href = `//toyota.ca`)}
-                    className={`btn btn-primary ${breadcrumb_button}`}
-                  >
-                    BUILD &amp; PRICE
-                  </button>
+                  <div className="d-flex justify-content-between">
+                    <button
+                      type="button"
+                      onClick={() => (window.location.href = `//toyota.ca`)}
+                      className={`btn btn-primary ${breadcrumb_button}`}
+                    >
+                      BUILD &amp; PRICE
+                    </button>
+                    <Link
+                      to="/"
+                      className={`btn btn-default ${mobile_back_button}`}
+                    >
+                      <Left />
+                    </Link>
+                  </div>
                   <h1 className={main_heading}>
                     <strong>20</strong>
                     <span> Reasons </span>
@@ -1682,12 +1673,12 @@ export default () => {
                                 className={reason_card_holder}
                                 onClick={e => {
                                   if (activeSlide === index) {
-                                    openMobileTabletModal(e, index)
+                                    openMobileTabletModal(e, index, id)
                                   }
                                 }}
                                 onKeyPress={e => {
                                   if (activeSlide === index) {
-                                    openMobileTabletModal(e, index)
+                                    openMobileTabletModal(e, index, id)
                                   }
                                 }}
                                 role="button"
@@ -1713,7 +1704,7 @@ export default () => {
                                         <button
                                           className={reason_card_button_element}
                                           onClick={e => {
-                                            openMobileTabletModal(e, index)
+                                            openMobileTabletModal(e, index, id)
                                           }}
                                         >
                                           <Open
@@ -1857,18 +1848,16 @@ export default () => {
                 </p>
               </Col>
             </Row>
-            {Array.from({ length: 5 }, (_, i) => i + 1).map((val, index) => {
+            {Array.from({ length: 5 }, (_, i) => i + 1).map((_, index) => {
               return (
                 <React.Fragment key={index}>
                   <Row>
                     <Col md={4} className="mb-3">
                       <div
                         className={`${reason_card_wrap}`}
-                        onClick={e =>
-                          jumpToReason(e, Reasons[4 * index + 0].id)
-                        }
-                        onKeyPress={e =>
-                          jumpToReason(e, Reasons[4 * index + 0].id)
+                        onClick={() => jumpToReason(Reasons[4 * index + 0].id)}
+                        onKeyPress={() =>
+                          jumpToReason(Reasons[4 * index + 0].id)
                         }
                         role="button"
                         tabIndex="0"
@@ -1901,11 +1890,9 @@ export default () => {
                     <Col md={8} className="mb-3">
                       <div
                         className={`${reason_card_wrap}`}
-                        onClick={e =>
-                          jumpToReason(e, Reasons[4 * index + 1].id)
-                        }
-                        onKeyPress={e =>
-                          jumpToReason(e, Reasons[4 * index + 1].id)
+                        onClick={() => jumpToReason(Reasons[4 * index + 1].id)}
+                        onKeyPress={() =>
+                          jumpToReason(Reasons[4 * index + 1].id)
                         }
                         role="button"
                         tabIndex="0"
@@ -1940,11 +1927,9 @@ export default () => {
                     <Col md={8} className="mb-3">
                       <div
                         className={`${reason_card_wrap}`}
-                        onClick={e =>
-                          jumpToReason(e, Reasons[4 * index + 2].id)
-                        }
-                        onKeyPress={e =>
-                          jumpToReason(e, Reasons[4 * index + 2].id)
+                        onClick={() => jumpToReason(Reasons[4 * index + 2].id)}
+                        onKeyPress={() =>
+                          jumpToReason(Reasons[4 * index + 2].id)
                         }
                         role="button"
                         tabIndex="0"
@@ -1977,11 +1962,9 @@ export default () => {
                     <Col md={4} className="mb-3">
                       <div
                         className={`${reason_card_wrap}`}
-                        onClick={e =>
-                          jumpToReason(e, Reasons[4 * index + 3].id)
-                        }
-                        onKeyPress={e =>
-                          jumpToReason(e, Reasons[4 * index + 3].id)
+                        onClick={() => jumpToReason(Reasons[4 * index + 3].id)}
+                        onKeyPress={() =>
+                          jumpToReason(Reasons[4 * index + 3].id)
                         }
                         role="button"
                         tabIndex="0"
