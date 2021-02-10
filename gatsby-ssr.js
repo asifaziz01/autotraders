@@ -10,9 +10,9 @@ import React from 'react'
 export const onRenderBody = ({ pathname, setHeadComponents }) => {
   let page = ''
   if (pathname) {
-    if (pathname.includes('reasons')) page = 'reasons'
-    else if (pathname.includes('hardest')) page = 'article-family'
-    else if (pathname.includes('described')) page = 'article-sienna'
+    if (pathname.includes('reasons')) page = '/reasons/'
+    else if (pathname.includes('hardest')) page = '/article-family/'
+    else if (pathname.includes('described')) page = '/article-sienna/'
     else page = '/home/'
   }
   setHeadComponents([
