@@ -83,9 +83,19 @@ const LandingFeatures = () => {
     `),
     featureData = [
       {
+        featTitle: 'Power Sliding Doors with Kick Sensors',
+        featImg: featureIV,
+        featContent: `<p>With an armload of groceries or even a child, it could be cumbersome to open a sliding door. But with the Sienna, not only do the side doors slide automatically, but now you don’t even have to touch them. <strong>With the proximity key fob in your pocket, simply wave your foot under the indicator on the bottom sill, and the door will magically open,</strong> giving you access without having to put anything on the ground. The rear cargo door also has the same features.</p>`,
+      },
+      {
         featTitle: 'JBL® Premium Audio System',
         featImg: featureI,
         featContent: `<p>Standard on the Limited and optional on the XSE, the <strong>12-speaker JBL® Premium Audio system can turn the Sienna’s interior into a concert theatre.</strong> The system includes a subwoofer and 1,200-watt amplifier, plus Clari-Fi® digital restoration technology. Coupled with the standard Apple CarPlayTM and Android AutoTM, and available SiriusXM® with 3-month All-Access trial, you can enjoy your music with crystal clarity.</p>`,
+      },
+      {
+        featTitle: 'Toyota Safety SenseTM 2.0',
+        featImg: featureV,
+        featContent: `<p>With the Sienna, you’ll likely be carrying the most precious cargo of all: your family. So every Sienna is equipped with <strong>Toyota Safety SenseTM 2.0</strong>, a suite of features that includes <strong>Pre-Collision System with Pedestrian Detection/Low Light Detection and Bicycle Detection, Full-Speed Range Dynamic Radar Cruise Control, Lane Departure Alert with Lane Trace Assist and Automatic High Beams.</strong></p>`,
       },
       {
         featTitle: 'Digital Display Rearview Mirror',
@@ -96,16 +106,6 @@ const LandingFeatures = () => {
         featTitle: 'Hybrid powertrain is standard',
         featImg: featureIII,
         featContent: `<p>No other minivan comes standard with a hybrid powertrain across the lineup. <strong>A 2.5-litre four-cylinder gasoline engine and two electric motors work together for front-drive versions, combining for 245 horsepower.</strong> For all-wheel-drive models, a third electric motor in the rear activates when wheel slip is detected for on-demand AWD.</p>`,
-      },
-      {
-        featTitle: 'Power Sliding Doors with Kick Sensors',
-        featImg: featureIV,
-        featContent: `<p>With an armload of groceries or even a child, it could be cumbersome to open a sliding door. But with the Sienna, not only do the side doors slide automatically, but now you don’t even have to touch them. <strong>With the proximity key fob in your pocket, simply wave your foot under the indicator on the bottom sill, and the door will magically open,</strong> giving you access without having to put anything on the ground. The rear cargo door also has the same features.</p>`,
-      },
-      {
-        featTitle: 'Toyota Safety SenseTM 2.0',
-        featImg: featureV,
-        featContent: `<p>With the Sienna, you’ll likely be carrying the most precious cargo of all: your family. So every Sienna is equipped with <strong>Toyota Safety SenseTM 2.0</strong>, a suite of features that includes <strong>Pre-Collision System with Pedestrian Detection/Low Light Detection and Bicycle Detection, Full-Speed Range Dynamic Radar Cruise Control, Lane Departure Alert with Lane Trace Assist and Automatic High Beams.</strong></p>`,
       },
     ],
     [show, setShow] = useState(false),
@@ -226,32 +226,32 @@ const LandingFeatures = () => {
                 <button
                   type="button"
                   className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_I}`}
-                  onClick={e => openFeature(e, 1)}
-                  aria-label="Hotspot 1"
-                />
-                <button
-                  type="button"
-                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_II}`}
                   onClick={e => openFeature(e, 2)}
                   aria-label="Hotspot 2"
                 />
                 <button
                   type="button"
-                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_III}`}
-                  onClick={e => openFeature(e, 3)}
-                  aria-label="Hotspot 3"
-                />
-                <button
-                  type="button"
-                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_IV}`}
+                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_II}`}
                   onClick={e => openFeature(e, 4)}
                   aria-label="Hotspot 4"
                 />
                 <button
                   type="button"
-                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_V}`}
+                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_III}`}
                   onClick={e => openFeature(e, 5)}
                   aria-label="Hotspot 5"
+                />
+                <button
+                  type="button"
+                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_IV}`}
+                  onClick={e => openFeature(e, 1)}
+                  aria-label="Hotspot 1"
+                />
+                <button
+                  type="button"
+                  className={`${landing_features.features_hot_spot} ${landing_features.features_hot_spot_V}`}
+                  onClick={e => openFeature(e, 3)}
+                  aria-label="Hotspot 3"
                 />
               </div>
             </div>
