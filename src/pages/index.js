@@ -1,5 +1,5 @@
 // Node components
-import React from 'react'
+import React, {useEffect} from 'react'
 
 // Project components
 import Layout from '../components/layout'
