@@ -809,8 +809,9 @@ export default () => {
     closeTabletModal = () => {
       setTabletModal(false)
     },
-    previousReason = (currentReasonId) => {
-      const reasonNumber = (currentReasonId === 1)? Reasons.length: (currentReasonId - 1);
+    previousReason = currentReasonId => {
+      const reasonNumber =
+        currentReasonId === 1 ? Reasons.length : currentReasonId - 1
       $(`.${reason_slide_loader}`).show()
       if (reasonIndex === 0) {
         setReasonIndex(Reasons.length - 1)
@@ -825,8 +826,9 @@ export default () => {
         eventLabel: `card ${('0' + reasonNumber).slice(-2)}`,
       })
     },
-    nextReason = (currentReasonId) => {
-      const reasonNumber = (currentReasonId === Reasons.length)? 1: (currentReasonId + 1);
+    nextReason = currentReasonId => {
+      const reasonNumber =
+        currentReasonId === Reasons.length ? 1 : currentReasonId + 1
       $(`.${reason_slide_loader}`).show()
       if (reasonIndex === Reasons.length - 1) {
         setReasonIndex(0)
@@ -1010,6 +1012,16 @@ export default () => {
   })
   useEffect(() => {
     if (isBrowser) {
+      if (
+        window.dataLayer[window.dataLayer.length - 1].pageType !==
+        '/brand-experience/toyota-sienna/2021/reasons/en'
+      ) {
+        window.dataLayer.push({
+          event: 'gtm_bx_virtual_page',
+          pageType: '/brand-experience/toyota-sienna/2021/reasons/en',
+          sponsoredContentCampaign: 'toyota sienna - 2021',
+        })
+      }
       resetMode()
       setTimeout(() => {
         setSliderWidth()
@@ -1115,7 +1127,7 @@ export default () => {
                       >
                         <div className={`col ${reason_navigation}`}>
                           <button
-                            onClick={()=>previousReason(currentReason.id)}
+                            onClick={() => previousReason(currentReason.id)}
                             className={`${reason_roundButton} ${prev}`}
                           >
                             <Left />
@@ -1350,7 +1362,7 @@ export default () => {
                         </div>
                         <div className={`col text-right ${reason_navigation}`}>
                           <button
-                            onClick={()=>nextReason(currentReason.id)}
+                            onClick={() => nextReason(currentReason.id)}
                             className={`${reason_roundButton} ${next}`}
                           >
                             <Right />
@@ -1461,7 +1473,11 @@ export default () => {
                                               reason_card_button_element
                                             }
                                             onClick={e => {
-                                              openMobileTabletModal(e, index, id)
+                                              openMobileTabletModal(
+                                                e,
+                                                index,
+                                                id
+                                              )
                                             }}
                                           >
                                             <Open
