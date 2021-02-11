@@ -69,6 +69,7 @@ const ArticleTemplate = ({ data }) => {
       exitSliderImages,
     } = frontmatter,
     { prevImageI, prevImageII, nextImage } = data,
+    [virtualPagePushed, setVirtualPagePushed] = useState(0),
     [entrySlider, setEntrySlider] = useState(null),
     [middleSlider, setMiddleSlider] = useState(null),
     [exitSlider, setExitSlider] = useState(null),
@@ -93,21 +94,23 @@ const ArticleTemplate = ({ data }) => {
       }
     }, [])
   useEffect(() => {
-    if (isBrowser) {
-      if (
-        window.dataLayer[window.dataLayer.length - 1].pageType !==
+    if (
+      window.dataLayer[window.dataLayer.length - 1].pageType !==
         `/brand-experience/toyota-sienna/2021/article-${
           window.location.pathname.includes('family') ? 'family' : 'sienna'
-        }/en`
-      ) {
-        window.dataLayer.push({
-          event: 'gtm_bx_virtual_page',
-          pageType: `/brand-experience/toyota-sienna/2021/article-${
-            window.location.pathname.includes('family') ? 'family' : 'sienna'
-          }/en`,
-          sponsoredContentCampaign: 'toyota sienna - 2021',
-        })
-      }
+        }/en` &&
+      virtualPagePushed === 0
+    ) {
+      window.dataLayer.push({
+        event: 'gtm_bx_virtual_page',
+        pageType: `/brand-experience/toyota-sienna/2021/article-${
+          window.location.pathname.includes('family') ? 'family' : 'sienna'
+        }/en`,
+        sponsoredContentCampaign: 'toyota sienna - 2021',
+      })
+      setVirtualPagePushed(1)
+    }
+    if (isBrowser) {
       setSliderWidth()
       $(window).width() >= 768
         ? $(`.${hero}`).height($(`.${hero_image}.imageDesktop`).height())
@@ -128,7 +131,7 @@ const ArticleTemplate = ({ data }) => {
           : $(`.${hero}`).height($(`.${hero_image}.imageMobile`).height())
       })
     }
-  }, [isBrowser, setSliderWidth, hero, hero_image])
+  }, [virtualPagePushed, isBrowser, setSliderWidth, hero, hero_image])
   return (
     <Layout itemScope itemType="http://schema.org/Article">
       <SEO title={title} description={description || excerpt} />

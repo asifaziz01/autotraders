@@ -786,6 +786,7 @@ export default () => {
     `),
     isBrowser = typeof window !== 'undefined',
     [mode, setMode] = useState('desktop'),
+    [virtualPagePushed, setVirtualPagePushed] = useState(0),
     [sliderSize, setSetSliderSize] = useState(null),
     [activeSlide, setActiveSlide] = useState(null),
     [slider, setSlider] = useState(null),
@@ -1011,17 +1012,19 @@ export default () => {
     Reasons[index].userImage = userImage
   })
   useEffect(() => {
+    if (
+      window.dataLayer[window.dataLayer.length - 1].pageType !==
+        '/brand-experience/toyota-sienna/2021/reasons/en' &&
+      virtualPagePushed === 0
+    ) {
+      window.dataLayer.push({
+        event: 'gtm_bx_virtual_page',
+        pageType: '/brand-experience/toyota-sienna/2021/reasons/en',
+        sponsoredContentCampaign: 'toyota sienna - 2021',
+      })
+      setVirtualPagePushed(1)
+    }
     if (isBrowser) {
-      if (
-        window.dataLayer[window.dataLayer.length - 1].pageType !==
-        '/brand-experience/toyota-sienna/2021/reasons/en'
-      ) {
-        window.dataLayer.push({
-          event: 'gtm_bx_virtual_page',
-          pageType: '/brand-experience/toyota-sienna/2021/reasons/en',
-          sponsoredContentCampaign: 'toyota sienna - 2021',
-        })
-      }
       resetMode()
       setTimeout(() => {
         setSliderWidth()
@@ -1045,6 +1048,7 @@ export default () => {
       }
     }
   }, [
+    virtualPagePushed,
     isBrowser,
     resetMode,
     reasonIndex,
@@ -1407,26 +1411,6 @@ export default () => {
                         onSwiper={swiper => {
                           setTabletSlider(swiper)
                           setActiveSlide(swiper.realIndex)
-                        }}
-                        onSlideNextTransitionEnd={swiper => {
-                          window.dataLayer.push({
-                            event: 'gtm_bx',
-                            eventAction:
-                              'toyota sienna 2021 - card - nav - next',
-                            eventLabel: `card ${(
-                              '0' + swiper.activeIndex
-                            ).slice(-2)}`,
-                          })
-                        }}
-                        onSlidePrevTransitionEnd={swiper => {
-                          window.dataLayer.push({
-                            event: 'gtm_bx',
-                            eventAction:
-                              'toyota sienna 2021 - card - nav - prev',
-                            eventLabel: `card ${(
-                              '0' + swiper.activeIndex
-                            ).slice(-2)}`,
-                          })
                         }}
                       >
                         {Reasons.map(
