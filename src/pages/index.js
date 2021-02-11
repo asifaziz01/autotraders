@@ -11,6 +11,18 @@ import StickyAd from '../components/sticky-ad'
 import SEO from '../components/seo'
 
 const IndexPage = ({ data }) => {
+  useEffect(() => {
+    if (
+      window.dataLayer[window.dataLayer.length - 1].pageType !==
+      '/brand-experience/toyota-sienna/2021/home/en'
+    ) {
+      window.dataLayer.push({
+        event: 'gtm_bx_virtual_page',
+        pageType: '/brand-experience/toyota-sienna/2021/home/en',
+        sponsoredContentCampaign: 'toyota sienna - 2021',
+      })
+    }
+  }, [])
   return (
     <Layout>
       <SEO title="Home" />
