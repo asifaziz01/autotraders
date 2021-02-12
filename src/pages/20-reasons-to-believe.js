@@ -796,15 +796,15 @@ export default () => {
     [reasonIndex, setReasonIndex] = useState(0),
     [currentReason, setCurrentReason] = useState(null),
     openMobileTabletModal = (_, index, reasonId) => {
+      window.dataLayer.push({
+        event: 'gtm_bx',
+        eventAction: 'toyota sienna 2021 - card - flip',
+        eventLabel: `card ${('0' + reasonId).slice(-2)}`,
+      })
       setTimeout(() => {
         setReasonIndex(index)
         setCurrentReason(Reasons[index])
         setTabletModal(true)
-        window.dataLayer.push({
-          event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - flip',
-          eventLabel: `card ${('0' + reasonId).slice(-2)}`,
-        })
       }, 301)
     },
     closeTabletModal = () => {
@@ -845,6 +845,11 @@ export default () => {
       })
     },
     jumpToReason = reasonId => {
+      window.dataLayer.push({
+        event: 'gtm_bx',
+        eventAction: 'toyota sienna 2021 - card - click',
+        eventLabel: `card ${('0' + reasonId).slice(-2)}`,
+      })
       $('html, body').animate(
         {
           scrollTop: 0,
@@ -861,11 +866,6 @@ export default () => {
         if (mobileSlider !== null) {
           mobileSlider.slideTo(reasonId)
         }
-        window.dataLayer.push({
-          event: 'gtm_bx',
-          eventAction: 'toyota sienna 2021 - card - click',
-          eventLabel: `card ${('0' + reasonId).slice(-2)}`,
-        })
       }, 201)
     },
     resetMode = useCallback(() => {
