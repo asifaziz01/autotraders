@@ -1703,6 +1703,9 @@ export default () => {
                                         </p>
                                         <button
                                           className={reason_card_button_element}
+                                          onClick={e => {
+                                            openMobileTabletModal(e, index, id)
+                                          }}
                                         >
                                           <Open
                                             className={reason_card_button_icon}
