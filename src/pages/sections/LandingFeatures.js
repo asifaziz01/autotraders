@@ -90,12 +90,12 @@ const LandingFeatures = () => {
       {
         featTitle: 'JBL® Premium Audio System',
         featImg: featureI,
-        featContent: `<p>Standard on the Limited and optional on the XSE, the <strong>12-speaker JBL® Premium Audio system can turn the Sienna’s interior into a concert theatre.</strong> The system includes a subwoofer and 1,200-watt amplifier, plus Clari-Fi® digital restoration technology. Coupled with the standard Apple CarPlayTM and Android AutoTM, and available SiriusXM® with 3-month All-Access trial, you can enjoy your music with crystal clarity.</p>`,
+        featContent: `<p>Standard on the Limited and optional on the XSE, the <strong>12-speaker JBL® Premium Audio system can turn the Sienna’s interior into a concert theatre.</strong> The system includes a subwoofer and 1,200-watt amplifier, plus Clari-Fi® digital restoration technology. Coupled with the standard Apple CarPlay™ and Android Auto™, and available SiriusXM® with 3-month All-Access trial, you can enjoy your music with crystal clarity.</p>`,
       },
       {
-        featTitle: 'Toyota Safety SenseTM 2.0',
+        featTitle: 'Toyota Safety Sense™ 2.0',
         featImg: featureV,
-        featContent: `<p>With the Sienna, you’ll likely be carrying the most precious cargo of all: your family. So every Sienna is equipped with <strong>Toyota Safety SenseTM 2.0</strong>, a suite of features that includes <strong>Pre-Collision System with Pedestrian Detection/Low Light Detection and Bicycle Detection, Full-Speed Range Dynamic Radar Cruise Control, Lane Departure Alert with Lane Trace Assist and Automatic High Beams.</strong></p>`,
+        featContent: `<p>With the Sienna, you’ll likely be carrying the most precious cargo of all: your family. So every Sienna is equipped with <strong>Toyota Safety Sense™ 2.0</strong>, a suite of features that includes <strong>Pre-Collision System with Pedestrian Detection/Low Light Detection and Bicycle Detection, Full-Speed Range Dynamic Radar Cruise Control, Lane Departure Alert with Lane Trace Assist and Automatic High Beams.</strong></p>`,
       },
       {
         featTitle: 'Digital Display Rearview Mirror',
@@ -173,7 +173,7 @@ const LandingFeatures = () => {
             <Col md={6}>
               <div className={landing_features.features_content_holder}>
                 <h5 className={landing_features.features_content_title}>
-                  Features we can’t live without
+                  Features We Can’t Live Without
                 </h5>
                 <div className={landing_features.features_content_wrapper}>
                   <div className={landing_features.features_content}>
