@@ -1060,7 +1060,7 @@ export default () => {
   ])
   return (
     <Layout>
-      <SEO title="20 Reasons to Believe" />
+      <SEO title="Toyota Sienna | 20 Reasons to Believe" />
       {(mode === 'desktop' || mode === 'tablet') && (
         <section className={breadcrumb_section}>
           <Container fluid>
@@ -1456,13 +1456,6 @@ export default () => {
                                             className={
                                               reason_card_button_element
                                             }
-                                            onClick={e => {
-                                              openMobileTabletModal(
-                                                e,
-                                                index,
-                                                id
-                                              )
-                                            }}
                                           >
                                             <Open
                                               className={
@@ -1703,9 +1696,6 @@ export default () => {
                                         </p>
                                         <button
                                           className={reason_card_button_element}
-                                          onClick={e => {
-                                            openMobileTabletModal(e, index, id)
-                                          }}
                                         >
                                           <Open
                                             className={reason_card_button_icon}

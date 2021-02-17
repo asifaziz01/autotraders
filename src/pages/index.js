@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => {
   useEffect(() => {
     if (
       window.dataLayer[window.dataLayer.length - 1].pageType !==
-      '/brand-experience/toyota-sienna/2021/home/en' &&
+        '/brand-experience/toyota-sienna/2021/home/en' &&
       virtualPagePushed === 0
     ) {
       window.dataLayer.push({
@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
   }, [virtualPagePushed])
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Toyota Sienna" />
       <LandingHero />
       <LandingCTA />
       <LandingArticle />

@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `AutoTrader`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `autoTRADER.ca`,
+    description: `autoTRADER explores 2021 Toyota Sienna. See how it makes us #VanProud.`,
     author: `@AutoTrader`,
-    siteUrl: `https://autotrader-cms.netlify.app/`,
+    siteUrl: `https://autotrader.ca/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

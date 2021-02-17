@@ -25,7 +25,7 @@ const LandingHero = () => {
             <iframe
               className={landing_hero.iframe}
               title="Sienna 2021"
-              src="https://player.vimeo.com/video/508977604?autoplay=1&muted=1&loop=1&autopause=0&controls=1"
+              src="https://player.vimeo.com/video/508977604"
               frameBorder="0"
               allow="autoplay; fullscreen"
               allowFullScreen={true}

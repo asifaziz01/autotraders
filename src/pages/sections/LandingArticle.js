@@ -79,7 +79,7 @@ const LandingArticle = () => {
                     alt="Article-1"
                   />
                   <div className={landing_article.article_title}>
-                    The hardest working family member
+                    The Hardest Working Family Member
                   </div>
                 </Link>
               </div>
@@ -100,7 +100,7 @@ const LandingArticle = () => {
                     alt="Article-2"
                   />
                   <div className={landing_article.article_title}>
-                    Sienna 2021, the view from every row
+                    Sienna 2021 – The View From Every Row
                   </div>
                 </Link>
               </div>
