@@ -50,10 +50,11 @@
 }
 
 .buildButton {
-  background-color: #ffffff;
+  background-color: #CC0000;
   border: none;
   border-radius: 100px;
   bottom: 25px;
+  color: #ffffff;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;

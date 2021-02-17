@@ -25,7 +25,7 @@ const LandingFeatures = () => {
       {
         featureCar: file(relativePath: { eq: "feature-car.png" }) {
           childImageSharp {
-            fluid(maxWidth: 789, maxHeight: 551) {
+            fluid(maxWidth: 789, maxHeight: 559) {
               ...GatsbyImageSharpFluid
             }
           }

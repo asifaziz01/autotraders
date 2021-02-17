@@ -1060,7 +1060,7 @@ export default () => {
   ])
   return (
     <Layout>
-      <SEO title="20 Reasons to Believe" />
+      <SEO title="Toyota Sienna | 20 Reasons to Believe" />
       {(mode === 'desktop' || mode === 'tablet') && (
         <section className={breadcrumb_section}>
           <Container fluid>

@@ -48,7 +48,7 @@ const ArticleTemplate = ({ data }) => {
       navigate_previous,
       navigate_next,
     } = navigation,
-    { excerpt, frontmatter } = post,
+    { frontmatter } = post,
     {
       author,
       title,
@@ -134,7 +134,10 @@ const ArticleTemplate = ({ data }) => {
   }, [virtualPagePushed, isBrowser, setSliderWidth, hero, hero_image])
   return (
     <Layout itemScope itemType="http://schema.org/Article">
-      <SEO title={title} description={description || excerpt} />
+      <SEO
+        title={`Toyota Sienna | ${title}`}
+        description={description}
+      />
       <section className={hero}>
         {imageDesktop !== null && (
           <Img
@@ -449,7 +452,6 @@ export const pageQuery = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
       html
       frontmatter {
         title
