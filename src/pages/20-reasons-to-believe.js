@@ -1088,7 +1088,7 @@ export default () => {
                 <button
                   type="button"
                   onClick={() =>
-                    (window.location.href = `//toyota.ca&utm_source=autoTRADER&utm_medium=referral`)
+                    (window.location.href = `//toyota.ca?utm_source=autoTRADER&utm_medium=referral`)
                   }
                   className={`btn btn-primary ${breadcrumb_button}`}
                 >
@@ -1607,7 +1607,7 @@ export default () => {
                     <button
                       type="button"
                       onClick={() =>
-                        (window.location.href = `//toyota.ca&utm_source=autoTRADER&utm_medium=referral`)
+                        (window.location.href = `//toyota.ca?utm_source=autoTRADER&utm_medium=referral`)
                       }
                       className={`btn btn-primary ${breadcrumb_button}`}
                     >
@@ -1762,7 +1762,7 @@ export default () => {
                           <button
                             type="button"
                             onClick={() =>
-                              (window.location.href = `//toyota.ca&utm_source=autoTRADER&utm_medium=referral`)
+                              (window.location.href = `//toyota.ca?utm_source=autoTRADER&utm_medium=referral`)
                             }
                             className={`btn btn-primary ${breadcrumb_button}`}
                           >

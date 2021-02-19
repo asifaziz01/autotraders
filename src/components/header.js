@@ -55,7 +55,7 @@ const Header = () => {
             <LogoSVG className="d-sm-none" height={50} width={80} />
           </a>
           <a
-            href="//toyota.ca&utm_source=autoTRADER&utm_medium=referral"
+            href="//toyota.ca?utm_source=autoTRADER&utm_medium=referral"
             onClick={() =>
               window.dataLayer.push({
                 event: 'gtm_bx',
