@@ -5,7 +5,7 @@ import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap'
 import $ from 'jquery'
 
 import header from '../css/header.module.css'
-import toyotaLogo from '../images/toyota-logo.png'
+import toyotaLogo from '../images/toyota-fixed-logo.png'
 import LogoSVG from './icons/logo'
 
 const Header = () => {
@@ -65,7 +65,7 @@ const Header = () => {
             }
             className={at_navbar_brand_right}
           >
-            <img className="" src={toyotaLogo} alt="Toyota" />
+            <img className="" width="62px" src={toyotaLogo} alt="Toyota" />
           </a>
         </div>
       </div>
