@@ -391,8 +391,8 @@ const ArticleTemplate = ({ data }) => {
                           window.location.pathname.includes(
                             'hardest-working-family-member'
                           )
-                            ? '/sienna-from-every-row/'
-                            : '/hardest-working-family-member/'
+                            ? '/sienna-from-every-row.html'
+                            : '/hardest-working-family-member.html'
                         }
                         className={navigate_previous}
                       >

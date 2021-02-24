@@ -164,7 +164,7 @@ const Header = () => {
                       </div>
                       <div className={at_nav_item}>
                         <Link
-                          to="/hardest-working-family-member/"
+                          to="/hardest-working-family-member.html"
                           onClick={() => {
                             window.dataLayer.push({
                               event: 'gtm_bx',
@@ -178,7 +178,7 @@ const Header = () => {
                           ARTICLE
                         </Link>
                         <Link
-                          to="/hardest-working-family-member/"
+                          to="/hardest-working-family-member.html"
                           onClick={() => {
                             window.dataLayer.push({
                               event: 'gtm_bx',
@@ -194,7 +194,7 @@ const Header = () => {
                       </div>
                       <div className={at_nav_item}>
                         <Link
-                          to="/sienna-from-every-row/"
+                          to="/sienna-from-every-row.html"
                           onClick={() => {
                             window.dataLayer.push({
                               event: 'gtm_bx',
@@ -208,7 +208,7 @@ const Header = () => {
                           ARTICLE
                         </Link>
                         <Link
-                          to="/sienna-from-every-row/"
+                          to="/sienna-from-every-row.html"
                           onClick={() => {
                             window.dataLayer.push({
                               event: 'gtm_bx',

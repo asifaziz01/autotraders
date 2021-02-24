@@ -71,7 +71,7 @@ const LandingArticle = () => {
                         eventLabel: ``,
                       })
                     }
-                    to="/hardest-working-family-member/"
+                    to="/hardest-working-family-member.html"
                   >
                     <Img
                       fluid={Article_1.childImageSharp.fluid}
@@ -95,7 +95,7 @@ const LandingArticle = () => {
                         eventLabel: ``,
                       })
                     }
-                    to="/sienna-from-every-row/"
+                    to="/sienna-from-every-row.html"
                   >
                     <Img
                       fluid={Article_2.childImageSharp.fluid}
@@ -146,7 +146,7 @@ const LandingArticle = () => {
                         eventLabel: ``,
                       })
                     }
-                    to="/hardest-working-family-member/"
+                    to="/hardest-working-family-member.html"
                   >
                     <Img
                       fluid={Article_1.childImageSharp.fluid}
@@ -176,7 +176,7 @@ const LandingArticle = () => {
                         eventLabel: ``,
                       })
                     }
-                    to="/sienna-from-every-row/"
+                    to="/sienna-from-every-row.html"
                   >
                     <Img
                       fluid={Article_2.childImageSharp.fluid}

@@ -67,20 +67,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions
-  return new Promise(resolve => {
-    if (page.path === `/`) {
-      deletePage(page)
-      createPage({
-        ...page,
-        path: `/index.html`,
-      })
-    }
-    resolve()
-  })
-}
-
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
 
@@ -116,4 +102,18 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  return new Promise(resolve => {
+    if (page.path === `/`) {
+      deletePage(page)
+      createPage({
+        ...page,
+        path: `/index.html`,
+      })
+    }
+    resolve()
+  })
 }

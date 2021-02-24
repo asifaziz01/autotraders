@@ -2010,7 +2010,7 @@ export default () => {
                   <div className={navigation.nav_area}>
                     <p>Previous</p>
                     <Link
-                      to="/hardest-working-family-member/"
+                      to="/hardest-working-family-member.html"
                       className={navigation.navigate_previous}
                     >
                       <h4>
@@ -2032,7 +2032,7 @@ export default () => {
                   <div className={navigation.nav_area}>
                     <p>Next</p>
                     <Link
-                      to="/sienna-from-every-row/"
+                      to="/sienna-from-every-row.html"
                       className={navigation.navigate_next}
                     >
                       <h4>
