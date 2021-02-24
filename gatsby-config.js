@@ -8,7 +8,7 @@ module.exports = {
   pathPrefix: `/brandcampaign/toyota/sienna/en/`,
   plugins: [
     `gatsby-plugin-react-helmet`,
-
+    `gatsby-plugin-create-page-html`,
     /*
     {
       resolve: "gatsby-plugin-google-tagmanager",
