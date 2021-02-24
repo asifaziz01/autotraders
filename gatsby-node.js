@@ -52,25 +52,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
 }
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions
-  return new Promise(resolve => {
-    if (page.path === `/`) {
-      deletePage(page)
-      createPage({
-        ...page,
-        path: `/index.html`,
-      })
-    }
-    // const prev = { ...page }
-    // page.path += "index.html"
-    // if (page.path !== prev.path) {
-    //   deletePage(prev)
-    //   createPage(page)
-    // }
-    resolve()
-  })
-}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -84,6 +65,20 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     })
   }
+}
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  return new Promise(resolve => {
+    if (page.path === `/`) {
+      deletePage(page)
+      createPage({
+        ...page,
+        path: `/index.html`,
+      })
+    }
+    resolve()
+  })
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
