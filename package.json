@@ -11,6 +11,7 @@
     "@types/jquery": "^3.5.4",
     "gatsby": "^2.29.2",
     "gatsby-image": "^2.8.0",
+    "gatsby-plugin-create-page-html": "0.0.1",
     "gatsby-plugin-feed": "^2.10.0",
     "gatsby-plugin-google-analytics": "^2.8.0",
     "gatsby-plugin-google-tagmanager": "^2.9.0",
@@ -58,7 +59,7 @@
     "url": "git+https://github.com/4nkit5hukla/autotraders.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby clean && gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
