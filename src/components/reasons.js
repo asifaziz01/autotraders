@@ -24,7 +24,7 @@ export default [
   {
     id: 3,
     reasonBy: `<strong>CLAUDINE DALCOURT,</strong> MONTREAL, PQ`,
-    reasonBigHeading: `Picnic Time,<br/>Rain or Shine!`,
+    reasonBigHeading: `Picnic Time, Rain or Shine!`,
     reasonDescription: `<p>My family loves to take trips and do fun stuff! We decided to go for a picnic in Dieppe Park on a sunny day. A big cloud cover rolled in; as we were setting up the picnic tables and it was pouring down rain within a few minutes. We barely had 10 minutes outside but the family was determined to have a picnic so we folded the seats in the back, laid out a blanket, opened <strong>the trunk which acted as a great shelter</strong> and had the picnic inside the Van.</p>`,
     reasonDescriptionTablet: `<p>My family loves to take trips and do fun stuff! We decided to go for a picnic in Dieppe Park on a sunny day. A big cloud cover rolled in; as we were setting up the picnic tables and it was pouring down rain within a few minutes. We barely had 10 minutes outside but the family was determined to have a picnic so we folded the seats in the back, laid out a blanket, opened <strong>the trunk which acted as a great shelter</strong> and had the picnic inside the Van.</p>`,
     reasonGridTitle: `We can keep everyone warm and happy in our Sienna.`,
