@@ -1072,7 +1072,7 @@ export default () => {
                       type="button"
                       className={`btn btn-primary ${breadcrumb_back_button}`}
                       onClick={() => {
-                        navigate('/')
+                        navigate('/index.html')
                       }}
                     >
                       <Left />
