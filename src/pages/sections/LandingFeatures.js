@@ -201,6 +201,13 @@ const LandingFeatures = () => {
               >
                 BUILD &amp; PRICE
               </button>
+              <img
+                SRC="https://ad.doubleclick.net/ddm/trackimp/N491202.140810AUTOTRADER.CAEN/B25408013.296990827;dc_trk_aid=490698258;dc_trk_cid=147005701;ord=5554231;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=?"
+                BORDER="0"
+                HEIGHT="1"
+                WIDTH="1"
+                ALT="Advertisement"
+              />
             </Col>
           </Row>
           <div className="d-flex flex-column flex-xl-row">
@@ -293,6 +300,12 @@ const LandingFeatures = () => {
                   >
                     BUILD &amp; PRICE
                   </button>
+                  <img
+                    src="https://tps.doubleverify.com/visit.jpg?ctx=17512517&cmp=25408013&sid=3379295&plc=296990827&adsrv=1&btreg=&btadsrv=&crt=&tagtype=&dvtagver=6.1.img&"
+                    alt=""
+                    width="0"
+                    height="0"
+                  />
                 </div>
               </div>
             </div>

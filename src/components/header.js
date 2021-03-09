@@ -67,6 +67,12 @@ const Header = () => {
             className={at_navbar_brand_right}
           >
             <img className="" width="62px" src={toyotaLogo} alt="Toyota" />
+            <img
+              src="https://tps.doubleverify.com/visit.jpg?ctx=17512517&cmp=25408013&sid=3379295&plc=296830323&adsrv=1&btreg=&btadsrv=&crt=&tagtype=&dvtagver=6.1.img&"
+              alt=""
+              width="0"
+              height="0"
+            />
           </a>
         </div>
       </div>

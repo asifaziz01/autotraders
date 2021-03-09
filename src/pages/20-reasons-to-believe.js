@@ -1094,6 +1094,13 @@ export default () => {
                 >
                   BUILD &amp; PRICE
                 </button>
+                <img
+                  SRC="https://ad.doubleclick.net/ddm/trackimp/N491202.140810AUTOTRADER.CAEN/B25408013.296992564;dc_trk_aid=490698258;dc_trk_cid=147005701;ord=4654542;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=?"
+                  BORDER="0"
+                  HEIGHT="1"
+                  WIDTH="1"
+                  ALT="Advertisement"
+                />
               </div>
             </div>
           </Container>

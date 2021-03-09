@@ -86,6 +86,19 @@ const StickyAd = () => {
                 >
                   Build Your Own
                 </button>
+                <img
+                  SRC="https://ad.doubleclick.net/ddm/trackimp/N491202.140810AUTOTRADER.CAEN/B25408013.296990824;dc_trk_aid=490698258;dc_trk_cid=147005701;ord=123134134;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=?"
+                  BORDER="0"
+                  HEIGHT="1"
+                  WIDTH="1"
+                  ALT="Advertisement"
+                />
+                <img
+                  src="https://tps.doubleverify.com/visit.jpg?ctx=17512517&cmp=25408013&sid=3379295&plc=296990824&adsrv=1&btreg=&btadsrv=&crt=&tagtype=&dvtagver=6.1.img&"
+                  alt=""
+                  width="0"
+                  height="0"
+                />
               </div>
             </div>
             <button
