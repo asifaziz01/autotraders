@@ -79,7 +79,7 @@ const StickyAd = () => {
                       eventAction: 'toyota sienna 2021 - exit - toyota',
                       eventLabel: 'build your own',
                     })
-                    window.location.href = `//toyota.ca?utm_source=autoTRADER&utm_medium=referral`
+                    window.location.href = `https://ad.doubleclick.net/ddm/trackclk/N491202.140810AUTOTRADER.CAEN/B25408013.296990824;dc_trk_aid=490698258;dc_trk_cid=147005701;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;`
                   }}
                   type="button"
                   className={Ad.buildButton}

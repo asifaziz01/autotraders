@@ -56,7 +56,7 @@ const Header = () => {
           </a>
           <a
             rel="nofollow"
-            href="//toyota.ca?utm_source=autoTRADER&utm_medium=referral"
+            href="https://ad.doubleclick.net/ddm/trackclk/N491202.140810AUTOTRADER.CAEN/B25408013.296830323;dc_trk_aid=490699074;dc_trk_cid=147005701;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;"
             onClick={() =>
               window.dataLayer.push({
                 event: 'gtm_bx',

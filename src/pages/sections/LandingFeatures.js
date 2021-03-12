@@ -195,7 +195,7 @@ const LandingFeatures = () => {
                     eventAction: 'toyota sienna 2021 - exit - toyota',
                     eventLabel: 'build and price',
                   })
-                  window.location.href = `//toyota.ca?utm_source=autoTRADER&utm_medium=referral`
+                  window.location.href = `https://ad.doubleclick.net/ddm/trackclk/N491202.140810AUTOTRADER.CAEN/B25408013.296990827;dc_trk_aid=490698258;dc_trk_cid=147005701;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;`
                 }}
                 className={`btn btn-primary ${landing_features.features_button}`}
               >
