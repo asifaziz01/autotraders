@@ -318,11 +318,19 @@
 
   .features_modal {
     background-color: transparent;
+    display: block;
+    right: 0;
+    top: 0;
+    left: auto;
+    width: 100%;
+    max-width: 33%;
   }
 
   .features_modal .features_dialog {
+    /*
     width: 50%;
     max-width: 50%;
+    */
   }
 
   .features_modal_header {
