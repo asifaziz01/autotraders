@@ -318,8 +318,6 @@ const LandingFeatures = () => {
       <Modal
         show={show}
         onHide={() => closeFeature()}
-        backdrop="static"
-        keyboard={false}
         className={`fixed-left ${landing_features.features_modal}`}
         backdropClassName="d-none"
         contentClassName={landing_features.features_modal_content}
