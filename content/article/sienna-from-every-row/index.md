@@ -10,6 +10,8 @@ author_image: neil.png
 author: Neil Vorano
 entryQuote: “So many thoughtful touches in this roomy cabin mean even more usefulness and comfort for everyone.”
 entryBody: >-
+  **The 2021 Toyota Sienna was built with passengers in mind.** How does that actually work when you travel in it? To answer that question, we took the Sienna XSE for a spin while sitting in each row and checking out features that are unique to each seat and passenger. 
+
   #### Up Front:
 
 
